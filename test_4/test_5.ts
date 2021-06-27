@@ -1,16 +1,11 @@
-"use strict";
-let girl :object = {
-  firstname: 'Kira',
-  lastname: 'Yang',
-  age: 18
-};
-girl = {
-  firstname: 'Kira',
-  lastname: 'Yang',
-  age: 18,
-  greet :()=>{}
+interface Phone {
+    model: string,
+    price?: number, // Property 'price' of type 'number' is not assignable to string index type 'string'.
+    [x: string]: string
 }
-let add = (x: number, y: number)=> { 
-    return x + y; 
-};  
-console.log(add(10,20))
+
+let myPhone: Phone = {
+    model: 'iphone 11',
+    price: 23000,
+    width: 100, //Type 'number' is not assignable to type 'string'.
+}
